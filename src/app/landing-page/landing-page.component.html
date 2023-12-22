@@ -1,48 +1,31 @@
 <div class="background-image">
-  <div class="hero min-h-screen">
+  <div class="hero min-h-screen backdrop-blur-sm">
     <div class="hero-content flex-col lg:flex-row-reverse">
       <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold text-white flex flex-col">
+        <h1 class="lg:mt-5 text-5xl font-bold text-white flex flex-col">
           Utviklerkurs
-          <small class="text-base mt-4">
-            Våre tjenester er alltid av høy kvalitet og leveres med profesjonalitet og flid.
+          <small class="text-base mt-2 text-info">
+            Tjenester av høy kvalitet, levert med profesjonalitet og flid.
           </small>
         </h1>
         <p class="py-6 text-white">
-          Vi tilbyr utvikler kurs innen programmering, UX-design, front-end og back-end. Vi tilbyr også opplæring innen
-          grafisk utforming innen Photoshop, Adobe InDesign, design av trykksaker, som f.eks. visittkort, flyers,
-          plakater, o.l. Hos oss har vi fokus på opplæring, både på avdelingen og gjennom nettbaserte kurs.
+          Et intensivkurs i nettside- og programutvikling basert på å gi deltakerne en god innføring i prinsippene for å
+          utvikle strukturerte, kreative og fungerende løsninger.
         </p>
       </div>
-      <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-        <form class="card-body">
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Email</span>
-            </label>
-            <input type="email" placeholder="email" class="input input-bordered" required />
-          </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text">Password</span>
-            </label>
-            <input type="password" placeholder="password" class="input input-bordered" required />
-            <label class="label">
-              <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-            </label>
-          </div>
-          <div class="form-control mt-6">
-            <button class="btn btn-info text-info-content">
-              Logg inn
-            </button>
-          </div>
-        </form>
+      <div class="card shrink-0 w-full max-w-lg shadow-2xl">
+        <!-- <div class="skeleton "></div> -->
+        <div class="mockup-code glass bg-neutral bg-opacity-50">
+          <pre data-prefix="$" class="mb-2 text-base-content"><code>printf("$<span class="text-info">INFORMASJON</span>")</code></pre>
+          <pre data-prefix=">" class="text-success"><code>Nivå:     Nybegynner/Viderekommen</code></pre>
+          <pre data-prefix=">" class="text-warning"><code>Sted:     Bergen</code></pre>
+          <pre data-prefix=">" class="text-accent"><code>Varighet: 4 Måneder</code></pre>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
 <!-- Photo by <a href="https://unsplash.com/@safarslife?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Safar Safarov</a> on <a href="https://unsplash.com/photos/black-flat-screen-computer-monitor-turned-on-displaying-website-koOdUvfGr4c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+
+<app-services-banner></app-services-banner>

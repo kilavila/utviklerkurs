@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.checkDarkMode();
+    // this.checkDarkMode();
   }
 
   checkDarkMode() {
