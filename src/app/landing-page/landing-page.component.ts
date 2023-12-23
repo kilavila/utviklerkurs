@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { ServicesBannerComponent } from '../services-banner/services-banner.component';
+import { SliderComponent } from '../slider/slider.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -9,6 +9,7 @@ import { ServicesBannerComponent } from '../services-banner/services-banner.comp
   imports: [
     CommonModule,
     ServicesBannerComponent,
+    SliderComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
@@ -17,12 +18,15 @@ export class LandingPageComponent implements AfterViewInit {
 
   loading: boolean = true;
 
-  constructor() { }
+  constructor(
+    private viewportScroller: ViewportScroller
+  ) {}
 
   ngAfterViewInit(): void {
-    // setTimeout(() => {
-    //   this.loading = false
-    // }, 2000);
+  }
+
+  scrollTo(id: string) {
+    this.viewportScroller.scrollToAnchor(id);
   }
 
 }

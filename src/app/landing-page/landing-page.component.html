@@ -1,8 +1,8 @@
 <div class="background-image">
-  <div class="hero min-h-screen backdrop-blur-sm">
-    <div class="hero-content flex-col lg:flex-row-reverse">
+  <div class="hero min-h-screen">
+    <div class="hero-content flex-col lg:flex-row-reverse lg:items-start">
       <div class="text-center lg:text-left">
-        <h1 class="lg:mt-5 text-5xl font-bold text-white flex flex-col">
+        <h1 class="text-5xl font-bold text-white flex flex-col">
           Utviklerkurs
           <small class="text-base mt-2 text-info">
             Tjenester av høy kvalitet, levert med profesjonalitet og flid.
@@ -12,20 +12,43 @@
           Et intensivkurs i nettside- og programutvikling basert på å gi deltakerne en god innføring i prinsippene for å
           utvikle strukturerte, kreative og fungerende løsninger.
         </p>
-      </div>
-      <div class="card shrink-0 w-full max-w-lg shadow-2xl">
-        <!-- <div class="skeleton "></div> -->
-        <div class="mockup-code glass bg-neutral bg-opacity-50">
-          <pre data-prefix="$" class="mb-2 text-base-content"><code>printf("$<span class="text-info">INFORMASJON</span>")</code></pre>
-          <pre data-prefix=">" class="text-success"><code>Nivå:     Nybegynner/Viderekommen</code></pre>
-          <pre data-prefix=">" class="text-warning"><code>Sted:     Bergen</code></pre>
-          <pre data-prefix=">" class="text-accent"><code>Varighet: 4 Måneder</code></pre>
+        <div class="hidden lg:flex justify-start mt-5">
+          <button
+            class="btn btn-ghost text-secondary mt-5 uppercase"
+            (click)="scrollTo('services')"
+          >
+            Les mer
+            <span class="material-symbols-outlined">
+              expand_more
+            </span>
+          </button>
         </div>
       </div>
+      <div class="card shrink-0 w-full max-w-lg">
+        <div class="mockup-code bg-neutral border-t-2 border-t-neutral-800 border-b-2 border-b-neutral-950">
+          <pre data-prefix="$" class="text-secondary"><code>print( $informasjon )</code></pre>
+          <pre data-prefix="-" class="text-secondary"></pre>
+          <pre data-prefix=">" class="text-accent font-bold"><code>Nivå:     Nybegynner/Viderekommen</code></pre>
+          <pre data-prefix=">" class="text-warning font-bold"><code>Sted:     Bergen</code></pre>
+          <pre data-prefix=">" class="text-error font-bold"><code>Varighet: 4 Måneder</code></pre>
+        </div>
+      </div>
+
+      <button
+        class="btn btn-ghost text-secondary mt-5 uppercase lg:hidden"
+        (click)="scrollTo('services')"
+      >
+        Les mer
+        <span class="material-symbols-outlined">
+          expand_more
+        </span>
+      </button>
     </div>
   </div>
 </div>
 
 <!-- Photo by <a href="https://unsplash.com/@safarslife?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Safar Safarov</a> on <a href="https://unsplash.com/photos/black-flat-screen-computer-monitor-turned-on-displaying-website-koOdUvfGr4c?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
 
-<app-services-banner></app-services-banner>
+<app-services-banner id="services"></app-services-banner>
+
+<app-slider></app-slider>
