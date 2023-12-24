@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import Splide from '@splidejs/splide';
 
 @Component({
@@ -7,6 +8,7 @@ import Splide from '@splidejs/splide';
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
   ],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
@@ -21,7 +23,7 @@ export class SliderComponent implements AfterViewInit {
       image: 'https://picsum.photos/800/400?random=1',
       button: {
         text: 'Les mer',
-        href: '/kurs-informasjon'
+        href: '/deltaker'
       },
     },
     {
@@ -49,26 +51,33 @@ export class SliderComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    new Splide('.splide', {
+    new Splide('#slider', {
       type: 'slide',
       autoplay: false,
       interval: 5000,
       perPage: 3,
       rewind: true,
+      rewindByDrag: true,
       pagination: false,
+      classes: {
+        arrows: 'hidden',
+        arrow: 'hidden',
+        prev: 'hidden',
+        next: 'hidden',
+      },
       breakpoints: {
         1500: {
           perPage: 2,
+          classes: {
+            arrows: 'splide__arrows slider-arrows',
+            arrow: 'splide__arrow slider-arrow',
+            prev: 'splide__arrow--prev slider-arrow-prev',
+            next: 'splide__arrow--next slider-arrow-next',
+          },
         },
         1024: {
           perPage: 1,
         },
-      },
-      classes: {
-        arrows: 'splide__arrows slider-arrows',
-        arrow: 'splide__arrow slider-arrow',
-        prev: 'splide__arrow--prev slider-arrow-prev',
-        next: 'splide__arrow--next slider-arrow-next',
       },
     }).mount();
   }

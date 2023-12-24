@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { ServicesBannerComponent } from '../services-banner/services-banner.component';
 import { SliderComponent } from '../slider/slider.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -10,6 +11,7 @@ import { SliderComponent } from '../slider/slider.component';
     CommonModule,
     ServicesBannerComponent,
     SliderComponent,
+    RouterModule,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
