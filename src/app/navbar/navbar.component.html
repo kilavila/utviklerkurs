@@ -1,7 +1,10 @@
-<header class="navbar z-50 bg-neutral text-white">
+<header class="navbar bg-neutral text-white">
   <div class="navbar-start">
-    <div class="dropdown">
-    </div>
+    <button class="btn btn-square btn-ghost mx-2">
+      <span class="material-symbols-outlined text-base-300">
+        menu
+      </span>
+    </button>
     <a
       routerLink="/"
       class="btn btn-ghost"
@@ -10,18 +13,28 @@
         src="/assets/img/logo-white.svg"
         width="77"
         height="35"
+        alt="Senter for ArbeidsLivsForberedelse logo"
       />
     </a>
   </div>
   <div class="navbar-center hidden lg:flex">
   </div>
   <div class="navbar-end">
-    <a routerLink="/innlogging" class="btn btn-ghost btn-sm rounded-btn">
-      <span class="material-symbols-outlined text-base-300">
-        person
+    <button
+      class="btn btn-ghost btn-sm rounded-btn"
+      (click)="toggleSearchModal()"
+    >
+      <span class="material-symbols-outlined mt-1 text-base-300">
+        search
       </span>
-      Logg inn
-    </a>
+      <!-- Søk -->
+      <kbd class="kbd kbd-xs pt-1 px-2 bg-base-200 text-neutral">
+        CTRL
+      </kbd>
+      <kbd class="kbd kbd-xs pt-1 px-2 bg-base-200 text-neutral">
+        M
+      </kbd>
+    </button>
   </div>
 </header>
 

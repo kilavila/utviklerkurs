@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 
@@ -14,25 +14,14 @@ import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 })
 export class NavbarComponent implements OnInit {
 
-  darkMode: boolean = false;
+  @Output() toggleSearchEmitter = new EventEmitter<any>();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-    // this.checkDarkMode();
-  }
+  ngOnInit(): void {}
 
-  checkDarkMode() {
-    const theme = localStorage.getItem('utviklerkurs-theme');
-    if (theme === 'dark') {
-      this.darkMode = true;
-    }
-  }
-
-  toggleDarkMode() {
-    this.darkMode = !this.darkMode;
-
-    localStorage.setItem('utviklerkurs-theme', this.darkMode ? 'dark' : 'light');
+  toggleSearchModal() {
+    this.toggleSearchEmitter.emit();
   }
 
 }

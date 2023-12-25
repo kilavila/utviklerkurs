@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchComponent } from './search/search.component';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,14 @@ import { FooterComponent } from './footer/footer.component';
     RouterOutlet,
     NavbarComponent,
     FooterComponent,
+    SearchComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
+
+  searchModalOpen: boolean = false;
 
   constructor(
     private router: Router,
@@ -30,6 +34,10 @@ export class AppComponent implements OnInit {
       }
       window.scrollTo(0, 0)
     });
+  }
+
+  toggleSiteSearch(): void {
+    this.searchModalOpen = !this.searchModalOpen;
   }
 
 }
