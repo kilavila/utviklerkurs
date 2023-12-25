@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BreadcrumbsComponent } from '../breadcrumbs/breadcrumbs.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
     RouterModule,
+    BreadcrumbsComponent,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'

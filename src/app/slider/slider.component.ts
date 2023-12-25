@@ -38,7 +38,7 @@ export class SliderComponent implements AfterViewInit {
     },
     {
       icon: 'diversity_3',
-      title: 'Samarbeid med NAV',
+      title: 'Vi samarbeider!',
       description: 'Det er vitkig for oss at deltakerne får den informasjonen de trenger for å ta en avgjørelse på om de ønsker å begynne på utviklerkurset eller på avdelingen. Vi inviterer dere derfor gjerne til et uforpliktene møte sammen med deltaker for å fortelle om tiltaket vårt og gi dere en omvisning i våre lokaler.',
       image: 'https://picsum.photos/800/400?random=3',
       button: {

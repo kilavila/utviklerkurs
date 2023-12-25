@@ -1,0 +1,17 @@
+<div
+  *ngIf="breadcrumbs.length > 0"
+  class="text-sm breadcrumbs bg-neutral text-base-300 p-0"
+>
+  <ul class="pb-2 px-6">
+    <li>
+      <span class="material-symbols-outlined home-app-logo">
+        home_app_logo
+      </span>
+    </li>
+    <li *ngFor="let crumb of breadcrumbs">
+      <span>
+        {{ crumb.split('-').join(' ') | titlecase }}
+      </span>
+    </li>
+  </ul>
+</div>

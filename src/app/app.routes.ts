@@ -35,13 +35,13 @@ export const routes: Routes = [
     component: DashboardComponent,
   },
   {
-    path: '404',
+    path: '404-side-ikke-funnet',
     component: Error404PageComponent,
   },
 
   {
     path: '**',
-    redirectTo: '/404',
+    redirectTo: '/404-side-ikke-funnet',
     pathMatch: 'full',
   }
 ];
