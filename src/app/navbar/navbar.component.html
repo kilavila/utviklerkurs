@@ -1,10 +1,5 @@
-<header class="navbar bg-neutral text-white">
+<header class="navbar z-50 fixed bg-neutral text-white px-2">
   <div class="navbar-start">
-    <button class="btn btn-square btn-ghost mx-2">
-      <span class="material-symbols-outlined text-base-300">
-        menu
-      </span>
-    </button>
     <a
       routerLink="/"
       class="btn btn-ghost"
@@ -20,22 +15,17 @@
   <div class="navbar-center hidden lg:flex">
   </div>
   <div class="navbar-end">
-    <button
-      class="btn btn-ghost btn-sm rounded-btn"
-      (click)="toggleSearchModal()"
-    >
-      <span class="material-symbols-outlined mt-1 text-base-300">
-        search
-      </span>
-      <!-- Søk -->
-      <kbd class="kbd kbd-xs pt-1 px-2 bg-base-200 text-neutral">
-        CTRL
-      </kbd>
-      <kbd class="kbd kbd-xs pt-1 px-2 bg-base-200 text-neutral">
-        M
-      </kbd>
-    </button>
+    <label class="btn btn-ghost btn-square swap swap-rotate mr-1">
+      <input
+        type="checkbox"
+        [(ngModel)]="menuOpen"
+      />
+      <svg class="swap-off fill-neutral-content" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+      <svg class="swap-on fill-error" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+    </label>
   </div>
 </header>
 
 <app-breadcrumbs></app-breadcrumbs>
+
+<app-menu-drawer [menuOpen]="menuOpen"></app-menu-drawer>
