@@ -37,7 +37,6 @@ export class NavbarComponent implements OnInit {
         this.menuOpen = false;
       }
     });
-
   }
 
   toggleSearchModal() {
