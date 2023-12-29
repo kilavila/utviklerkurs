@@ -34,22 +34,7 @@ export class LandingPageComponent implements AfterViewInit {
         instance.destroy();
       },
     })
-      .type('Senter for')
-      .pause(1000)
-      .delete(null, { instant: false, })
-      .type('ALF')
-      .pause(200)
-      .move(-2)
-      .type('rbeids')
-      .pause(100)
-      .move(1)
-      .type('ivs')
-      .pause(100)
-      .move(1)
-      .type('orberedelse')
-      .pause(1500)
-      .delete(null, { speed: 50, })
-      .type('Utviklerkurs', { instant: false, })
+      .type('Utviklerkurs')
       .go();
   }
 
