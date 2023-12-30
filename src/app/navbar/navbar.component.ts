@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   @Output() toggleSearchEmitter = new EventEmitter<any>();
 
-  menuOpen: boolean = true;
+  menuOpen: boolean = false;
 
   constructor(
     private router: Router,
@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
         return;
       }
       if (this.menuOpen) {
-        // this.menuOpen = false;
+        this.menuOpen = false;
       }
     });
   }

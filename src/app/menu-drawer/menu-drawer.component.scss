@@ -52,3 +52,10 @@
 .menu-drawer.open .drawer-section-foot {
   right: 0;
 }
+
+.menu-item .material-symbols-outlined {
+  color: hsl(0, 0%, 80%);
+}
+.menu-item-active .material-symbols-outlined {
+  color: hsl(0, 0%, 25%);
+}

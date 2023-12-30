@@ -18,7 +18,7 @@ export class SliderComponent implements AfterViewInit {
   slides: Slide[] = [
     {
       icon: 'person',
-      title: 'Ønske om å bli utvikler?',
+      title: 'Interessert i utvikling?',
       description: `Både næringslivet og offentlige tjenester har i dag et uvanlig stort behov for IT-kompetanse innen de fleste sektorer. Ifølge Nav's bedriftsundersøkelse (2020) var det 3.250 ubesatte IT-stillinger i Norge, og innen 2030 er det estimert et behov for opp mot 40.000 nye arbeidstakere med IT-kompetanse, for å støtte Norges teknologiske utvikling.`,
       image: 'https://picsum.photos/800/400?random=1',
       button: {
@@ -56,8 +56,9 @@ export class SliderComponent implements AfterViewInit {
       autoplay: false,
       interval: 5000,
       perPage: 3,
-      rewind: true,
-      rewindByDrag: true,
+      rewind: false,
+      rewindByDrag: false,
+      drag: false,
       pagination: false,
       classes: {
         arrows: 'hidden',
@@ -68,6 +69,9 @@ export class SliderComponent implements AfterViewInit {
       breakpoints: {
         1500: {
           perPage: 2,
+          rewindByDrag: true,
+          rewind: true,
+          drag: true,
           classes: {
             arrows: 'splide__arrows slider-arrows',
             arrow: 'splide__arrow slider-arrow',

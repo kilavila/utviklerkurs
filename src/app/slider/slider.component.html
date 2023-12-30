@@ -18,7 +18,15 @@
             </p>
           </div>
           <div class="flex justify-end pt-5">
-            <a *ngIf="slide.button" routerLink="{{ slide.button.href }}" class="btn btn-info text-white uppercase">
+            <a
+              *ngIf="slide.button"
+              routerLink="{{ slide.button.href }}"
+              class="
+                btn
+                btn-ghost
+                text-secondary
+              "
+            >
               {{ slide.button.text }}
               <span class="material-symbols-outlined">
                 read_more

@@ -1,6 +1,7 @@
-<div [ngClass]="{ 'open backdrop-blur backdrop-saturate-0': menuOpen }" class="
-    menu-drawer
-  ">
+<div
+  [ngClass]="{ 'open backdrop-blur backdrop-saturate-0': menuOpen }"
+  class="menu-drawer"
+>
   <div class="
       menu-drawer-inner
       w-full
@@ -18,23 +19,27 @@
       items-center
       justify-center
     ">
+
       <span class="
         w-full
         max-w-2xl
         mb-4
         text-xl
+        text-base-300
       ">
-        Hovedmeny
+        Meny
       </span>
-      <ul class="menu w-full max-w-2xl h-fit bg-info text-neutral-content rounded-box">
+
+      <ul class="menu w-full max-w-2xl py-1 bg-info text-neutral-content rounded-box">
         <li
           *ngFor="let menuItem of menuItems"
+          class="py-0"
         >
           <a
             routerLink="{{ menuItem.href }}"
             [routerLinkActiveOptions]="{ exact : true }"
-            routerLinkActive="glass text-info-content"
-            class="rounded-box"
+            routerLinkActive="menu-item-active glass text-info-content font-bold"
+            class="menu-item my-1 rounded-box"
           >
             <span class="material-symbols-outlined">
               {{ menuItem.icon }}
@@ -43,6 +48,7 @@
           </a>
         </li>
       </ul>
+
     </div>
 
     <div class="
@@ -56,14 +62,17 @@
       items-center
       justify-center
     ">
+
       <span class="
         w-full
         max-w-2xl
         mb-4
         text-xl
+        text-base-300
       ">
         Kursportalen
       </span>
+
       <a
         routerLink="/innlogging"
         class="
@@ -76,6 +85,7 @@
       >
         Logg inn
       </a>
+
     </div>
 
     <div class="
@@ -89,14 +99,18 @@
       items-center
       justify-center
     ">
+
       <span class="
         w-full
         max-w-2xl
         mb-4
         text-xl
+        text-base-300
       ">
         Mer informasjon
       </span>
+
+
       <nav class="
         w-full
         max-w-2xl
@@ -118,6 +132,7 @@
           {{ link.text }}
         </a>
       </nav>
+
     </div>
 
   </div>
