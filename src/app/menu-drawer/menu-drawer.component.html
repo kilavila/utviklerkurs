@@ -13,10 +13,36 @@
       bg-neutral
       text-neutral-content
       bg-opacity-95
+      flex
+      flex-col
+      items-center
+      justify-center
     ">
-      <a routerLink="/deltaker" class="link">
-        Deltaker
-      </a>
+      <span class="
+        w-full
+        max-w-2xl
+        mb-4
+        text-xl
+      ">
+        Hovedmeny
+      </span>
+      <ul class="menu w-full max-w-2xl h-fit bg-info text-neutral-content rounded-box">
+        <li
+          *ngFor="let menuItem of menuItems"
+        >
+          <a
+            routerLink="{{ menuItem.href }}"
+            [routerLinkActiveOptions]="{ exact : true }"
+            routerLinkActive="glass text-info-content"
+            class="rounded-box"
+          >
+            <span class="material-symbols-outlined">
+              {{ menuItem.icon }}
+            </span>
+            {{ menuItem.text }}
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div class="
@@ -25,9 +51,30 @@
       bg-neutral
       text-neutral-content
       bg-opacity-95
+      flex
+      flex-col
+      items-center
+      justify-center
     ">
-      <a routerLink="/bedrift" class="link">
-        Bedrift
+      <span class="
+        w-full
+        max-w-2xl
+        mb-4
+        text-xl
+      ">
+        Kursportalen
+      </span>
+      <a
+        routerLink="/innlogging"
+        class="
+          w-full
+          max-w-2xl
+          btn
+          btn-outline
+          btn-error
+        "
+      >
+        Logg inn
       </a>
     </div>
 
@@ -37,10 +84,40 @@
       bg-neutral
       text-neutral-content
       bg-opacity-95
+      flex
+      flex-col
+      items-center
+      justify-center
     ">
-      <a routerLink="/nav" class="link">
-        NAV
-      </a>
+      <span class="
+        w-full
+        max-w-2xl
+        mb-4
+        text-xl
+      ">
+        Mer informasjon
+      </span>
+      <nav class="
+        w-full
+        max-w-2xl
+        flex
+        flex-wrap
+      ">
+        <a
+          *ngFor="let link of links"
+          href="{{ link.href }}"
+          target="_blank"
+          class="
+            link
+            link-hover
+            w-1/3
+            pr-4
+            pb-2
+          "
+        >
+          {{ link.text }}
+        </a>
+      </nav>
     </div>
 
   </div>
