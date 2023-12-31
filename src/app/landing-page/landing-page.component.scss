@@ -1,5 +1,9 @@
 .background-image {
-  background-image: url('/assets/img/landing-page-hero.jpg');
+  // TODO: Create desktop and mobile background images
+  background-image: -webkit-image-set(
+    url('/assets/img/landing-page-hero.webp') type("image/webp"),
+    url('/assets/img/landing-page-hero.jpg')  type("image/jpg")
+  );
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
