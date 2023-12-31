@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ServicesBannerComponent } from '../services-banner/services-banner.component';
 import { SliderComponent } from '../slider/slider.component';
 import { TypeItService } from '../services/type-it.service';
+import { MapComponent } from '../map/map.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -14,6 +15,7 @@ import { TypeItService } from '../services/type-it.service';
     ServicesBannerComponent,
     SliderComponent,
     RouterModule,
+    MapComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
