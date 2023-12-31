@@ -11,6 +11,8 @@ export class LeafletService {
   tileLayer: any = L.tileLayer;
   svgOverlay: any = L.svgOverlay;
   latLngBounds: any = L.latLngBounds;
+  polyline: any = L.polyline;
+  popup: any = L.popup;
 
   constructor() {}
 
