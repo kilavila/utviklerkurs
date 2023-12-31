@@ -7,16 +7,24 @@ declare let TypeIt: any;
 })
 export class TypeItService {
 
+  build: any = TypeIt;
+
   constructor() {}
 
-  run(selector: string, text: string): void {
+  run(selector: string, text: string, speed?: number): void {
+    let typeSpeed: number = 100;
+
+    speed ? typeSpeed = speed : null
+
     const instance = new TypeIt(selector, {
-      speed: 100,
+      speed: typeSpeed,
       afterComplete: () => {
         instance.destroy();
       },
     })
+      .pause(1250)
       .type(text)
+      .pause(1250)
       .go();
   }
 
