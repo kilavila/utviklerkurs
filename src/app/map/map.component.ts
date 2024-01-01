@@ -18,7 +18,7 @@ export class MapComponent implements OnInit {
       attributionControl: true, // WARNING: Attribution must be included in the map!
       zoomControl: true,
       scrollWheelZoom: false,
-      touchZoom: false,
+      touchZoom: true,
       maxBounds: [[-90, -180], [90, 180]], // INFO: Max bounds of world
     },
     coordinates: {
@@ -42,6 +42,7 @@ export class MapComponent implements OnInit {
     this.initializePopup();
   }
 
+  // INFO: Load map
   initializeMap() {
     this.map = this.leaflet.map('map', this.mapOptions.init);
 
@@ -60,6 +61,7 @@ export class MapComponent implements OnInit {
     }).addTo(this.map);
   }
 
+  // INFO: Add vector layers
   initializeVectorLayers() {
     let buildingLatLng = [
       [60.37890341908291, 5.343062281608582],
@@ -87,6 +89,7 @@ export class MapComponent implements OnInit {
     ).addTo(this.map);
   }
 
+  // INFO: Add popup
   initializePopup() {
     this.popup = this.leaflet.popup()
       .setLatLng([this.mapOptions.coordinates.lat, this.mapOptions.coordinates.lng])
