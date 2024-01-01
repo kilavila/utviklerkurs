@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private viewPortScroller: ViewportScroller,
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +35,9 @@ export class AppComponent implements OnInit {
       }
       window.scrollTo(0, 0)
     });
+
+    // INFO: Set scroll offset for sticky navbar
+    this.viewPortScroller.setOffset([0, 64]);
   }
 
   toggleSiteSearch(): void {

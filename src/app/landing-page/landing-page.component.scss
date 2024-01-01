@@ -12,3 +12,15 @@
 .hero {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.profile-image {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.profile-image-silje {
+  background-image: url('https://alf.no/wp-content/uploads/2023/08/Silje.jpg');
+}
+.profile-image-tom {
+  background-image: url('https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png');
+}

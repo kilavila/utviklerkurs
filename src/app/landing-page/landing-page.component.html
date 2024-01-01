@@ -33,12 +33,15 @@
         </div>
       </div>
 
-      <button class="
+      <button
+        class="
           btn
           btn-ghost
           text-secondary
           mt-5
-        " (click)="scrollTo('services')">
+        "
+        (click)="scrollTo('services')"
+      >
         Les mer
         <span class="material-symbols-outlined">
           expand_more
@@ -57,82 +60,157 @@
 <div class="
   w-full
   p-8
+  flex
+  flex-col
+  xl:flex-row
   bg-base-200
 ">
   <div class="
+    w-full
+    xl:w-1/2
+    xl:flex
+    xl:flex-col
+    xl:justify-between
     py-4
+    xl:py-0
+    xl:pr-8
   ">
-    <h2 class="
-      mb-4
-      text-3xl
-    ">
-      Kontakt oss
-    </h2>
+    <div>
+      <h2 class="
+        mb-4
+        xl:my-0
+        xl:py-0
+        text-3xl
+      ">
+        Kontakt oss
+      </h2>
 
-    <div class="my-4 flex flex-col gap-4">
-      <div class="flex gap-4 items-center">
-        <div class="w-24 mask mask-squircle">
-          <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" />
+      <div class="
+        w-full
+        max-w-full
+        my-4
+        xl:my-8
+        p-4
+        flex
+        flex-col
+        gap-4
+        bg-info
+        text-info-content
+        glass
+        rounded
+      ">
+        <div class="flex gap-4 items-center">
+          <div class="
+            profile-image
+            profile-image-tom
+            w-24
+            h-24
+            rounded
+          "></div>
+          <div class="flex flex-col">
+            <div class="text-xl">
+              Tom Sunde
+            </div>
+            <div class="text-sm font-bold">
+              Jobbveileder Utviklerkurs
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                mail
+              </span>
+              <a
+                href="mailto:tom@alf.no"
+                class="link"
+              >
+                {{ 'tom@alf.no' }}
+              </a>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                phone
+              </span>
+              <a
+                href="tel:004792828738"
+                class="link"
+              >
+                +47 928 28 738
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-col">
-          <div class="text-xl">
-            Tom Sunde
-          </div>
-          <div class="text-sm">
-            Jobbveileder Utviklerkurs
-          </div>
-          <div class="text-sm">
-            {{ 'tom@alf.no' }}
-          </div>
-          <div class="text-sm">
-            92828738
+      </div>
+
+      <div class="
+        my-4
+        xl:my-8
+        p-4
+        flex
+        flex-col
+        gap-4
+        bg-info
+        text-info-content
+        glass
+        rounded
+      ">
+        <div class="flex gap-4 items-center">
+          <div class="
+            profile-image
+            profile-image-silje
+            w-24
+            h-24
+            rounded
+          "></div>
+          <div class="flex flex-col">
+            <div class="text-xl">
+              Silje Bolstad
+            </div>
+            <div class="text-sm font-bold">
+              Fagleder
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                mail
+              </span>
+              <a
+                href="mailto:silje@alf.no"
+                class="link"
+              >
+                {{ 'silje@alf.no' }}
+              </a>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                phone
+              </span>
+              <a
+                href="tel:004747489379"
+                class="link"
+              >
+                +47 474 89 379
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="my-4 flex flex-col gap-4">
-      <div class="flex gap-4 items-center">
-        <div class="w-24 mask mask-squircle">
-          <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" />
-        </div>
-        <div class="flex flex-col">
-          <div class="text-xl">
-            Silje Bolstad
-          </div>
-          <div class="text-sm">
-            Fagleder
-          </div>
-          <div class="text-sm">
-            {{ 'silje@alf.no' }}
-          </div>
-          <div class="text-sm">
-            47489379
-          </div>
-        </div>
-      </div>
+    <div>
+      <p class="pt-2 text-sm">
+        For generelle hendvendelser og andre spørsmål, ta gjerne kontakt med hovedkontoret.
+      </p>
+      <p class="pb-2 xl:pb-0 text-sm">
+        Mer kontakt informasjon finner du her:
+        <a href="https://alf.no/kontakt/" target="_blank" class="link">
+          alf.no/kontakt
+        </a>
+      </p>
     </div>
-
-    <p class="py-2 text-sm">
-      For generelle hendvendelser og andre spørsmål, ta gjerne kontakt med oss her:
-      <a href="https://alf.no/kontakt/" target="_blank" class="link">
-        https://alf.no/kontakt/
-      </a>.
-    </p>
   </div>
-  <app-map></app-map>
+
+  <div class="
+    w-full
+    xl:w-1/2
+  ">
+    <app-map></app-map>
+  </div>
 </div>
-
-<!-- Faglige spørsmål: -->
-<!-- Tom Sunde -->
-<!-- Jobbveileder Utviklerkurs -->
-
-<!-- Mail: tom@alf.no -->
-<!-- Tlf: 92828738 -->
-
-<!-- Administrative spørsmål: -->
-<!-- Silje Bolstad -->
-<!-- Fagleder -->
-
-<!-- Mail: silje@alf.no -->
-<!-- Tlf: 47489379 -->

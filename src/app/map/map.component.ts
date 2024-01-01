@@ -14,6 +14,10 @@ export class MapComponent implements OnInit {
   building: any;
   popup: any;
   mapOptions = {
+    data: {
+      url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    },
     init: {
       attributionControl: true, // WARNING: Attribution must be included in the map!
       zoomControl: true,
@@ -55,8 +59,8 @@ export class MapComponent implements OnInit {
       this.mapOptions.zoom.default,
     );
 
-    this.leaflet.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    this.leaflet.tileLayer(this.mapOptions.data.url, {
+      attribution: this.mapOptions.data.attribution,
       minZoom: this.mapOptions.zoom.min,
       maxZoom: this.mapOptions.zoom.max,
     }).addTo(this.map);

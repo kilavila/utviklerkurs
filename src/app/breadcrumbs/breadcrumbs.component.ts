@@ -33,8 +33,6 @@ export class BreadcrumbsComponent implements OnInit {
       url[0] !== ''
         ? this.breadcrumbs = url
         : this.breadcrumbs = [];
-
-      console.log(this.breadcrumbs);
     });
   }
 
