@@ -18,8 +18,9 @@ export class MapComponent implements OnInit {
       attributionControl: true, // WARNING: Attribution must be included in the map!
       zoomControl: true,
       scrollWheelZoom: false,
-      touchZoom: true,
       maxBounds: [[-90, -180], [90, 180]], // INFO: Max bounds of world
+      dragging: !this.leaflet.Browser.mobile,
+      tap: !this.leaflet.Browser.mobile,
     },
     coordinates: {
       lat: 60.37882942962819,

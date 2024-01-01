@@ -13,6 +13,7 @@ export class LeafletService {
   latLngBounds: any = L.latLngBounds;
   polyline: any = L.polyline;
   popup: any = L.popup;
+  Browser: any = L.Browser;
 
   constructor() {}
 
