@@ -20,6 +20,9 @@
 * {
   box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 
 html,
 body,
@@ -33,7 +36,6 @@ html {
 }
 body {
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
 }
 
 main {
@@ -42,12 +44,6 @@ main {
   display: flex;
   flex-direction: column;
 }
-
-/* section { */
-/*   width: 100%; */
-/*   margin: 0; */
-/*   padding: 48px; */
-/* } */
 
 p {
   max-width: 700px;
