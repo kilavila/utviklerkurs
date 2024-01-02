@@ -1,10 +1,10 @@
 .site-content {
-  width: calc(100% - 4px);
+  width: calc(100% - 10px);
 }
 
 .site-scrollbar {
   z-index: 40;
-  width: 4px;
+  width: 10px;
   height: 100vh;
   position: fixed;
   top: 0;

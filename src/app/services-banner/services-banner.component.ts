@@ -73,6 +73,7 @@ export class ServicesBannerComponent implements AfterViewInit {
       easing: 'linear',
       perPage: 7,
       perMove: 1,
+      drag: false,
       rewind: false,
       rewindByDrag: false,
       pagination: false,
