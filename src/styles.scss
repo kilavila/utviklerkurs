@@ -33,9 +33,7 @@ html {
 }
 body {
   font-family: 'Roboto', sans-serif;
-}
-html::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 
 main {
