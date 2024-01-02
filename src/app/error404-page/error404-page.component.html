@@ -1,12 +1,21 @@
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content text-center">
     <div class="max-w-xl">
-      <h1 class="text-3xl font-bold">
-        404 - Siden ble ikke funnet
+
+      <span class="block mb-4 text-xl">
+        ¯\_(ツ)_/¯
+      </span>
+
+      <h1 id="error404title" class="text-3xl font-bold">
+        404
+        <span id="errorTitle"></span>
       </h1>
-      <p class="py-6">
+
+      <p class="py-6 text-sm">
+        Siden du leter etter/linken du klikket på er ikke tilgjengelig.<br />
         Trenger du hjelp til å finne fram?
       </p>
+
       <ul class="menu menu-vertical text-md font-bold">
         <li class="hover:bg-base-300">
           <a routerLink="/" class="justify-center">
@@ -41,6 +50,21 @@
           </a>
         </li>
       </ul>
+
+      <p class="py-6 text-sm">
+        Mener du dette er en feil?<br />
+        <a
+          class="link"
+          (click)="contactUs('/', 'contactUsSection')"
+        >
+          Ta gjerne kontakt med oss slik at vi får rettet opp i feilen.
+        </a>
+      </p>
+
+      <p class="text-sm">
+        Om du er kursdeltaker og har problemer med kursportalen, må du ta kontakt med din veileder.
+      </p>
+
     </div>
   </div>
 </div>

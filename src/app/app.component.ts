@@ -4,6 +4,7 @@ import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
+import { RouterService } from './services/router.service';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
   constructor(
     private router: Router,
     private viewPortScroller: ViewportScroller,
+    public rs: RouterService,
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +35,7 @@ export class AppComponent implements OnInit {
       if (!(event instanceof NavigationEnd)) {
         return;
       }
-      window.scrollTo(0, 0)
+      this.rs.viewportScrollChecker();
     });
 
     // INFO: Set scroll offset for sticky navbar
