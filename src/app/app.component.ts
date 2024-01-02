@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { RouterService } from './services/router.service';
+import { ScrollbarComponent } from './scrollbar/scrollbar.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { RouterService } from './services/router.service';
     NavbarComponent,
     FooterComponent,
     SearchComponent,
+    ScrollbarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

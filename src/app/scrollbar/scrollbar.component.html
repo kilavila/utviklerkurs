@@ -1,1 +1,24 @@
-<p>scrollbar works!</p>
+<div
+  class="scrollbar"
+  [ngStyle]="{
+    'height': scrollbarHeight < 1
+      ? '18px'
+      : scrollbarHeight > 100
+        ? '100%'
+        : scrollbarHeight + '%',
+    'background': scrollbarHeight < 1
+      ? 'oklch(var(--n))'
+      : 'oklch(var(--in))'
+  }"
+>
+  <div
+    class="thumb"
+    [ngStyle]="{
+      'background': scrollbarHeight < 1
+        ? 'oklch(var(--n))'
+        : scrollbarHeight > 100
+          ? 'oklch(var(--in))'
+          : 'oklch(var(--nc))'
+    }"
+  ></div>
+</div>

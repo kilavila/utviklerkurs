@@ -1,0 +1,13 @@
+.site-content {
+  width: calc(100% - 4px);
+}
+
+.site-scrollbar {
+  z-index: 40;
+  width: 4px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: oklch(var(--n));
+}

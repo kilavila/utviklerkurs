@@ -1,15 +1,23 @@
-<app-navbar
-  (toggleSearchEmitter)="toggleSiteSearch()"
-></app-navbar>
+<div>
 
-<main class="bg-base-200 pt-16">
-  <router-outlet></router-outlet>
-</main>
+  <div class="site-content">
+    <app-navbar
+      (toggleSearchEmitter)="toggleSiteSearch()"
+    ></app-navbar>
 
-<app-footer></app-footer>
+    <main class="bg-base-200 pt-16">
+      <router-outlet></router-outlet>
+    </main>
 
-<app-search
-  class="hidden"
-  [searchOpen]="searchModalOpen"
-  (toggleSearchEmitter)="toggleSiteSearch()"
-></app-search>
+    <app-footer></app-footer>
+
+    <app-search
+      class="hidden"
+      [searchOpen]="searchModalOpen"
+      (toggleSearchEmitter)="toggleSiteSearch()"
+    ></app-search>
+  </div>
+
+  <app-scrollbar class="site-scrollbar"></app-scrollbar>
+
+</div>
