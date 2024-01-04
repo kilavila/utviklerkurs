@@ -1,3 +1,19 @@
+// TODO: FAVICON!
+// Ensure text remains visible during webfont load
+// Avoid enormous network payloads - Total size was 3,686 KiB
+// Background and foreground colors have a sufficient contrast ratio - Error!
+// Values assigned to role="" are not valid ARIA roles.
+// Document does not have a meta description
+// robots.txt is not valid - 23 errors found
+// Image elements do not have [alt] attributes
+// Form elements do not have associated labels
+// Links do not have a discernible name
+// Image elements have [alt] attributes that are redundant text.
+
+
+
+
+
 import { Component, OnInit } from '@angular/core';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
