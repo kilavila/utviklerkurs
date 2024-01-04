@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { LeafletService } from '../services/leaflet.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { LeafletService } from '../services/leaflet.service';
   templateUrl: './map.component.html',
   styleUrl: './map.component.scss'
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements AfterViewInit {
 
   map: any;
   building: any;
@@ -41,7 +41,7 @@ export class MapComponent implements OnInit {
     private leaflet: LeafletService,
   ) { }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.initializeMap();
     this.initializeVectorLayers();
     this.initializePopup();

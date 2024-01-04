@@ -1,9 +1,45 @@
-<section id="slider" class="splide p-0" aria-label="Informasjons kort galleri">
+<section id="slider" class="splide p-0 lg:p-1" aria-label="Informasjons kort galleri">
   <div class="splide__track p-0">
     <ul class="splide__list p-0">
-      <li *ngFor="let slide of slides" class="splide__slide slider-item"
-        [style.backgroundImage]="'url(' + slide.image + ')'">
-        <div class="flex flex-col justify-between h-full p-16 bg-neutral text-white bg-opacity-85">
+      <li
+        *ngFor="let slide of slides"
+        class="
+          splide__slide
+          slider-item
+          relative
+        "
+      >
+
+        <picture>
+          <source
+            srcset="{{ 'assets/img/webp/' + slide.image + '.webp' }}"
+            type="image/webp"
+          >
+          <img
+            src="{{ 'assets/img/jpg/' + slide.image + '.jpg' }}"
+            [alt]="slide.title"
+            class="
+              w-full
+              h-full
+              object-cover
+            "
+          >
+        </picture>
+
+        <div class="
+          flex
+          flex-col
+          justify-center
+          w-full
+          h-full
+          p-16
+          bg-neutral
+          text-white
+          bg-opacity-85
+          absolute
+          top-0
+          left-0
+        ">
           <div>
             <div class="flex items-center mb-3">
               <span class="material-symbols-outlined text-5xl text-base-300 mr-3">
@@ -13,7 +49,11 @@
                 {{ slide.title }}
               </h2>
             </div>
-            <p class="text-lg">
+            <p class="
+              text-lg
+              text-ellipsis
+              line-clamp-4
+            ">
               {{ slide.description }}
             </p>
           </div>
@@ -21,11 +61,8 @@
             <a
               *ngIf="slide.button"
               routerLink="{{ slide.button.href }}"
-              class="
-                btn
-                btn-ghost
-                text-secondary
-              "
+              class="btn"
+              [ngClass]="slide.button.class"
             >
               {{ slide.button.text }}
               <span class="material-symbols-outlined">
@@ -34,6 +71,7 @@
             </a>
           </div>
         </div>
+
       </li>
     </ul>
   </div>

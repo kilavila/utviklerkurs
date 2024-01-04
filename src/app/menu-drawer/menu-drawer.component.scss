@@ -6,13 +6,12 @@
   width: 100%;
   height: calc(100% - 64px);
   pointer-events: none;
-  transition-duration: 1s;
+  transition-duration: 0.65s;
   transition-delay: .1s;
 }
 .menu-drawer.open {
   display: block;
   pointer-events: all;
-  /* transition-delay: .3s; */
 }
 .menu-drawer-inner { position: relative; }
 
@@ -22,7 +21,7 @@
   right: -100%;
   padding: 12px;
   border-left: 4px solid oklch(var(--er));
-  transition-duration: .7s;
+  transition-duration: .4s;
   transition-timing-function: cubic-bezier(.6,-0.4,.5,1.36);
 }
 .menu-drawer.open .drawer-section {
@@ -38,13 +37,13 @@
 .drawer-section-body {
   top: 50%;
   height: 20%;
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
 }
 
 .drawer-section-foot {
   bottom: 0;
   height: 30%;
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 
 .menu-drawer.open .drawer-section-head,

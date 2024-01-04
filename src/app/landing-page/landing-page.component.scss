@@ -1,8 +1,7 @@
 .background-image {
-  // TODO: Create desktop and mobile background images
   background-image: -webkit-image-set(
-    url('/assets/img/landing-page-hero.webp') type("image/webp"),
-    url('/assets/img/landing-page-hero.jpg')  type("image/jpg")
+    url('/assets/img/webp/juanjo-jaramillo-mZnx9429i94-unsplash.webp') type("image/webp"),
+    url('/assets/img/jpg/juanjo-jaramillo-mZnx9429i94-unsplash.jpg')  type("image/jpg")
   );
   background-size: cover;
   background-position: center center;
@@ -23,4 +22,14 @@
 }
 .profile-image-tom {
   background-image: url('https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png');
+}
+
+
+@media screen and (max-width: 767px) {
+  .background-image {
+    background-image: -webkit-image-set(
+      url('/assets/img/webp/safar-safarov-koOdUvfGr4c-unsplash.webp') type("image/webp"),
+      url('/assets/img/jpg/safar-safarov-koOdUvfGr4c-unsplash.jpg')  type("image/jpg")
+    );
+  }
 }
