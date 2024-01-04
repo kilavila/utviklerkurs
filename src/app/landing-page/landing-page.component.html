@@ -9,10 +9,11 @@
           </small>
         </h1>
         <p class="py-6 text-white">
-          Et intensivkurs i nettside- og programutvikling basert på å gi deltakerne en god innføring i prinsippene for å
-          utvikle strukturerte, kreative og fungerende løsninger.
+          Et intensivkurs i nettside- og programutvikling med mål om å gi deltakerne en god innføring i prinsippene for
+          utvikling av strukturerte, kreative og velfungerende løsninger.
         </p>
       </div>
+
       <div class="card shrink-0 w-full max-w-lg">
         <div class="
           mockup-code
@@ -25,28 +26,70 @@
           sm:text-sm
           md:text-base
         ">
-          <pre data-prefix="$" class="text-secondary"><code>print( $informasjon )</code></pre>
-          <pre data-prefix="-" class="text-secondary"></pre>
+          <pre data-prefix="$" class="text-neutral-content"><code>print( $informasjon )</code></pre>
+          <pre data-prefix="-" class="text-neutral-content"></pre>
           <pre data-prefix=">" class="text-accent font-bold"><code>Nivå: Nybegynner/Viderekommen</code></pre>
           <pre data-prefix=">" class="text-warning font-bold"><code>Sted: Bergen</code></pre>
           <pre data-prefix=">" class="text-error font-bold"><code>Varighet: 4 Måneder</code></pre>
         </div>
       </div>
 
-      <button
-        class="
-          btn
-          btn-ghost
-          text-secondary
-          mt-5
-        "
-        (click)="scrollTo('services')"
-      >
-        Les mer
-        <span class="material-symbols-outlined">
-          expand_more
-        </span>
-      </button>
+      <div class="card w-full max-w-lg bg-neutral text-neutral-content">
+        <div class="card-body">
+
+          <h2 class="card-title text-2xl">
+            Kommende kurs:
+          </h2>
+
+          <div class="overflow-x-auto">
+            <table class="table">
+              <tbody>
+
+                <tr *ngFor="let course of courses" class="text-lg">
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div>
+                        <div class="font-bold">{{ course.date }}</div>
+                        <div class="text-sm opacity-50">
+
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="font-bold" [ngClass]="{
+                      'text-error': course.full,
+                      'text-success': !course.full,
+                    }">
+                    {{ course.status }}
+                  </td>
+                </tr>
+
+            </table>
+          </div>
+
+          <div class="card-actions justify-end mt-4">
+            <button class="btn" (click)="scrollTo('contactUsSection')">
+              Ta kontakt
+              <span class="material-symbols-outlined">
+                expand_more
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- <button class=" -->
+      <!--     btn -->
+      <!--     btn-outline -->
+      <!--     text-neutral-content -->
+      <!--     mt-5 -->
+      <!--   " (click)="scrollTo('services')"> -->
+      <!--   Les mer -->
+      <!--   <span class="material-symbols-outlined"> -->
+      <!--     expand_more -->
+      <!--   </span> -->
+      <!-- </button> -->
     </div>
   </div>
 </div>
@@ -57,172 +100,4 @@
 
 <app-slider></app-slider>
 
-<div id="contactUsSection" class="
-  w-full
-  p-8
-  flex
-  flex-col
-  xl:flex-row
-  bg-base-200
-">
-  <div class="
-    w-full
-    xl:w-1/2
-    xl:flex
-    xl:flex-col
-    xl:justify-between
-    py-4
-    xl:py-0
-    xl:pr-8
-  ">
-    <div>
-      <h2 class="
-        mb-4
-        xl:my-0
-        xl:py-0
-        text-3xl
-      ">
-        Kontakt oss
-      </h2>
-
-      <div class="
-        w-full
-        max-w-full
-        my-4
-        xl:my-8
-        flex
-        flex-col
-        gap-4
-        rounded
-        overflow-hidden
-      ">
-        <div class="flex">
-          <div class="
-            profile-image
-            profile-image-tom
-            w-32
-            h-32
-          "></div>
-          <div class="
-            flex-1
-            h-32
-            px-5
-            flex
-            flex-col
-            justify-center
-            bg-info
-            text-info-content
-            glass
-          ">
-            <div class="text-xl">
-              Tom Sunde
-            </div>
-            <div class="text-sm font-bold">
-              Jobbveileder Utviklerkurs
-            </div>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="material-symbols-outlined text-sm text-primary">
-                mail
-              </span>
-              <a
-                href="mailto:tom@alf.no"
-                class="link"
-              >
-                {{ 'tom@alf.no' }}
-              </a>
-            </div>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="material-symbols-outlined text-sm text-primary">
-                phone
-              </span>
-              <a
-                href="tel:004792828738"
-                class="link"
-              >
-                +47 928 28 738
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="
-        my-4
-        xl:my-8
-        flex
-        flex-col
-        gap-4
-        rounded
-        overflow-hidden
-      ">
-        <div class="flex items-center">
-          <div class="
-            profile-image
-            profile-image-silje
-            w-32
-            h-32
-          "></div>
-          <div class="
-            flex-1
-            h-32
-            px-5
-            flex
-            flex-col
-            justify-center
-            bg-info
-            text-info-content
-            glass
-          ">
-            <div class="text-xl">
-              Silje Bolstad
-            </div>
-            <div class="text-sm font-bold">
-              Fagleder
-            </div>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="material-symbols-outlined text-sm text-primary">
-                mail
-              </span>
-              <a
-                href="mailto:silje@alf.no"
-                class="link"
-              >
-                {{ 'silje@alf.no' }}
-              </a>
-            </div>
-            <div class="flex items-center gap-2 text-sm">
-              <span class="material-symbols-outlined text-sm text-primary">
-                phone
-              </span>
-              <a
-                href="tel:004747489379"
-                class="link"
-              >
-                +47 474 89 379
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <p class="pt-2 text-sm">
-        For generelle hendvendelser og andre spørsmål, ta gjerne kontakt med hovedkontoret.
-      </p>
-      <p class="pb-2 xl:pb-0 text-sm">
-        Mer kontakt informasjon finner du her:
-        <a href="https://alf.no/kontakt/" target="_blank" class="link">
-          alf.no/kontakt
-        </a>
-      </p>
-    </div>
-  </div>
-
-  <div class="
-    w-full
-    xl:w-1/2
-  ">
-    <app-map></app-map>
-  </div>
-</div>
+<app-contact [wide]="true"></app-contact>

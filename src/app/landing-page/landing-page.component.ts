@@ -6,6 +6,7 @@ import { ServicesBannerComponent } from '../services-banner/services-banner.comp
 import { SliderComponent } from '../slider/slider.component';
 import { TypeItService } from '../services/type-it.service';
 import { MapComponent } from '../map/map.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -15,7 +16,7 @@ import { MapComponent } from '../map/map.component';
     ServicesBannerComponent,
     SliderComponent,
     RouterModule,
-    MapComponent,
+    ContactComponent,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'
@@ -24,13 +25,26 @@ export class LandingPageComponent implements AfterViewInit {
 
   loading: boolean = true;
 
+  courses = [
+    {
+      date: 'Mars 2024',
+      status: 'Fulltegnet',
+      full: true,
+    },
+    {
+      date: 'August 2024',
+      status: 'Ledige plasser',
+      full: false,
+    },
+  ];
+
   constructor(
     private viewportScroller: ViewportScroller,
     private typeit: TypeItService,
   ) { }
 
   ngAfterViewInit(): void {
-    this.typeit.run('#pageTitle', 'Utviklerkurs');
+    this.typeit.run('#pageTitle', 'ALF Utviklerkurs');
   }
 
   scrollTo(id: string) {

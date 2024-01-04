@@ -1,6 +1,6 @@
 <div class="hero min-h-[300px] bg-accent text-accent-content glass">
   <div class="w-full hero-content">
-    <div class="w-full max-w-2xl">
+    <div class="w-full max-w-3xl">
 
       <h1 class="text-5xl font-bold">
         Bedrift
@@ -12,24 +12,22 @@
         etterspør av aktuelle tema og teknologier.
       </blockquote>
 
-      <!-- <button class="btn btn-primary">Get Started</button> -->
-
     </div>
   </div>
 </div>
 
 <div class="flex justify-center">
   <div class="
-    max-w-2xl
+    max-w-3xl
     py-8
     px-4
-    md:px-0
+    lg:px-0
   ">
 
     <h2 class="
       text-3xl
     ">
-      Etterspørsel på IT-ressurser
+      Etterspørsel etter IT-ressurser
     </h2>
 
     <p class="py-2">
@@ -40,7 +38,7 @@
     </p>
 
     <p class="py-2">
-      Her i ALF, har vi sett et stigende behov for kvalifiserte arbeidstakere i IT-bransjen, og har i flere år
+      Her i ALF as, har vi sett et stigende behov for kvalifiserte arbeidstakere i IT-bransjen, og har i flere år
       tilbudt et utviklerkurs for motiverte deltakere. Utviklerkurset fokuserer på å lære deltakerne det mest
       etterspurte, framtidsrettede og moderne innen programutvikling i dag. Kurset dekker både grunnleggende
       ferdigheter, men tilpasses også etter det næringslivet etterspør av aktuelle tema og teknologier.
@@ -64,39 +62,156 @@
       mt-10
       text-3xl
     ">
+      Faglige emner i Utviklerkurset:
+    </h2>
+
+    <p class="py-2">
+      Kort fortalt begynner vi med å lage enkle statiske nettsider ved bruk av HTML5 og CSS3. Vi går videre til
+      JavaScript og bruker størsteparten av tiden innen det språket. Deretter er målet å gjøre nettsidene dynamiske, det
+      betyr å hente ny oppdatert informasjon inn på våre eksisterende nettsider. Til det benytter vi JSON, og vi
+      kontakter API fra eksterne servere. Til slutt går vi et steg videre, og oppretter vår egen server og JSON-database
+      gjennom bruk av JSON-server, for å simulere backend.
+    </p>
+
+    <p class="py-2">
+      Brukere med forkunnskaper har gjerne sett på Express server og mongoDB i stedet for JSON-server løsningen, men det
+      er ikke en del av hoveddelen alle skal igjennom i Utviklerkurset per nå.
+    </p>
+
+    <p class="py-2">
+      I tillegg har vi et litt større prosjekt hvor deltakerne (sammen eller alene) skal levere en komplett løsning av
+      et nettsted.
+    </p>
+
+    <p class="py-2">
+      Tematisk innhold:
+    </p>
+
+    <div class="rounded overflow-hidden mt-2">
+      <table class="table">
+        <thead class="bg-neutral text-neutral-content text-lg">
+
+          <tr>
+            <th>Tema</th>
+            <th>Teknologier</th>
+          </tr>
+
+        </thead>
+        <tbody>
+
+          <tr
+            *ngFor="let item of thematicContent"
+            class="odd:bg-accent odd:text-accent-content"
+          >
+            <td class="font-bold text-xs">
+              {{ item.theme }}
+            </td>
+            <td class="text-base">
+              {{ item.tech }}
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="
+      mt-10
+      text-3xl
+    ">
+      Kursets innhold
+    </h2>
+
+    <p class="py-2">
+      Kurset krever ingen formelle forkunnskaper, men det forventes at deltakerne har en interesse for utvikling,
+      teknologi og IT. Alle deltakerne søker seg personlig inn på kurset med grunnlag i dette. I første halvdel av
+      utviklerkurset får deltakerne en grundig innføring i fellesemnene, som er utvikling av nettsider og
+      webapplikasjoner, da basert på HTML, CSS og Javascript.
+    </p>
+
+    <p class="py-2">
+      Etter fellesemnene får deltakerne selv velge seg en spesialisering basert på hva type jobb de ønsker, og hvilke
+      fagområdet de finner interessant. Dette baseres på deres ferdigheter, interesser, samt veiledning under
+      karriere-gjennomgangen vi har underveis i kurset. Spesialiseringene er; Databaser, Python, React, UI/UX-design,
+      Grafisk design og Digital markedsføring
+    </p>
+
+    <h2 class="
+      mt-10
+      text-3xl
+    ">
+      I løpet av kurset skal deltakerne igjennom følgende:
+    </h2>
+
+    <ul class="steps steps-vertical">
+      <!-- data-content="●" -->
+      <li *ngFor="let skill of basicSkills" class="step step-accent">
+        <p class="text-left">
+          {{ skill }}
+        </p>
+      </li>
+    </ul>
+
+    <p class="py-2">
+      Basert på spesialisering:
+    </p>
+
+    <ul class="steps steps-vertical">
+      <li *ngFor="let skill of specificSkills" data-content="●" class="step step-neutral">
+        <p class="text-left">
+          {{ skill }}
+        </p>
+      </li>
+    </ul>
+
+    <p class="py-2">
+      Kurset tar deltakerne fra nybegynner-nivå opp til et ferdighetsnivå der deltakerne er godt forberedt og rustet til
+      å ta del i det daglige arbeidet på en praksisplass. Noen deltakere med ekstra stor interesse og gode forkunnskaper
+      får også muligheten til å utvikle seg ytterligere, og gjøre en del oppgaver over kursets nivå.
+    </p>
+
+    <p class="py-2">
+      Det har vært gjennomført 6 kurs allerede med gode resultater. Deltakerne i kurset har fått praksisplasser, noen
+      har fått mersmak på utdannelse, og andre igjen har funnet seg spennende jobber innenfor feltet. Vi har også fått
+      gode tilbakemelding fra praksisplassene om at deltakerne besitter relevante og gode kunnskaper som bedriftene har
+      hatt bruk for.
+    </p>
+
+    <h2 class="
+      mt-10
+      text-3xl
+    ">
       Hvorfor ansette våre deltakere?
     </h2>
 
     <p class="py-2">
-      Deltakerne som er på vårt kurs har fra starten av en bakgrunn som hobby-programmere eller har en genuin interesse
-      for IT og utvikling. De evner å lære på kort tid og får mye praktisk erfaring med utvikling hos oss under
-      kursperioden.
+      Deltakerne som er på vårt kurs har fra starten av en bakgrunn som hobby-programmere og en genuin interesse for IT
+      og utvikling. De evner å lære på kort tid og får mye praktisk erfaring med utvikling hos oss under kursperioden.
     </p>
 
     <p class="py-2">
       På kurset får deltakerne forsøkt seg både som selvstendig utvikler og som en del av et team, samt arbeide både
-      fysisk på kurs-lokalet, og digitalt via hjemmekontor. Dette gjør at deltakerne våre er klar for de fleste
+      fysisk på kurs-lokalet, og digitalt via hjemmekontor ved behov. Dette gjør at deltakerne er klar for de fleste
       arbeidsformer en arbeidsplass har å by på.
     </p>
 
     <p class="py-2">
-      Vi følger deltaker og bedriften nøye opp under praksis, så om ikke arbeidsforholdet fungerer tilstrekkelig, er vi
-      raskt på plass for å finne en løsning som passer bedre. Deltakerne kan også få faglig oppfølging av kursholder,
-      slik at deltaker kan fortsette å utvikle seg under praksisen.
+      Vi følger deltaker og bedriften nøye opp under praksis, så om ikke arbeidsforholdet fungerer optimalt, er vi raskt
+      på plass for å finne en løsning som passer bedre.
     </p>
 
     <p class="py-2">
-      Når deltakeren er på praksis hos din bedrift dekker Nav hele eller deler av lønnen, slik at dere kan fokusere på
-      opplæring og tilrettelegging. Dette gjør at dere uforpliktende kan teste ut om deltakeren passer inn på deres
-      arbeidsplass.
+      Når deltakeren er på praksis hos din bedrift dekker Nav hele lønnen, slik at dere kan fokusere på opplæring og
+      tilrettelegging. Dette gjør at dere uforpliktende kan teste ut om deltakeren passer inn på deres arbeidsplass.
     </p>
 
     <p class="py-2">
       Våre deltakere er klar for å satse hos dere, så om dere er klar for å satse på våre deltakere ta gjerne kontakt.
     </p>
 
-    <!-- <div class="mockup-code mt-4 text-lg"> -->
-    <!--   <pre><code class="text-accent">Emnene på kurset: <span id="subjects" class="text-info font-bold"></span></code></pre> -->
-    <!-- </div> -->
+    <app-tech-typeit></app-tech-typeit>
+
+  <app-contact [wide]="false"></app-contact>
+
   </div>
 </div>

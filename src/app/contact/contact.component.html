@@ -1,0 +1,195 @@
+<div
+  id="contactUsSection"
+  class="
+    w-full
+    flex
+    flex-col
+  "
+  [ngClass]="{
+    'xl:flex-row p-4': wide,
+    'max-w-4xl px-0 pt-4': !wide,
+  }"
+>
+  <div
+    class="
+      w-full
+      py-4
+    "
+    [ngClass]="{
+      'xl:py-0 xl:pr-8 xl:w-1/2 xl:flex xl:flex-col xl:justify-between': wide,
+    }"
+  >
+    <div>
+      <h2
+        class="
+          mb-4
+          text-3xl
+        "
+        [ngClass]="{
+          'xl:my-0 py-0': wide,
+        }"
+      >
+        {{
+          wide
+            ? 'Her finner du oss'
+            : 'Har du flere spørsmål?'
+        }}
+      </h2>
+
+      <p class="mb-2" *ngIf="wide">
+        Du kommer lettest hit ved å ta buss nr 12 fra sentrum. Du går da av på stoppet "Strømmen", som ligger i
+        Møllendalsveien, like nedenfor oss.
+      </p>
+      <p *ngIf="wide">
+        Om du kommer med Bybane-1 kan du gå av på Danmarksplass, og spasere derfra.
+      </p>
+
+      <div
+        class="
+          w-full
+          max-w-full
+          my-4
+          flex
+          flex-col
+          gap-4
+          rounded
+          overflow-hidden
+        "
+        [ngClass]="{
+          'xl:my-8': wide,
+        }"
+      >
+        <div class="flex">
+          <div class="
+            profile-image
+            profile-image-tom
+            w-32
+            h-32
+          "></div>
+          <div class="
+            flex-1
+            h-32
+            px-5
+            flex
+            flex-col
+            justify-center
+            bg-info
+            text-info-content
+            glass
+          ">
+            <div class="text-xl">
+              Tom Sunde
+            </div>
+            <div class="text-sm font-bold">
+              Leder Utviklerkurset
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                mail
+              </span>
+              <a href="mailto:tom@alf.no" class="link">
+                {{ 'tom@alf.no' }}
+              </a>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                phone
+              </span>
+              <a href="tel:004792828738" class="link">
+                +47 928 28 738
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="
+          my-4
+          flex
+          flex-col
+          gap-4
+          rounded
+          overflow-hidden
+        "
+        [ngClass]="{
+          'xl:my-8': wide,
+        }"
+      >
+        <div class="flex items-center">
+          <div class="
+            profile-image
+            profile-image-silje
+            w-32
+            h-32
+          "></div>
+          <div class="
+            flex-1
+            h-32
+            px-5
+            flex
+            flex-col
+            justify-center
+            bg-info
+            text-info-content
+            glass
+          ">
+            <div class="text-xl">
+              Silje Bolstad
+            </div>
+            <div class="text-sm font-bold">
+              Fagleder AFT
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                mail
+              </span>
+              <a href="mailto:silje@alf.no" class="link">
+                {{ 'silje@alf.no' }}
+              </a>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+              <span class="material-symbols-outlined text-sm text-primary">
+                phone
+              </span>
+              <a href="tel:004747489379" class="link">
+                +47 474 89 379
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <p class="pt-2 text-sm">
+        For generelle hendvendelser og andre spørsmål, ta gjerne kontakt med hovedkontoret.
+      </p>
+      <p
+        class="
+          pb-2
+          text-sm
+          "
+        [ngClass]="{
+          'xl:pb-0': wide,
+        }"
+      >
+        Mer kontakt informasjon finner du her:
+        <a href="https://alf.no/kontakt/" target="_blank" class="link">
+          alf.no/kontakt
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="
+      w-full
+    "
+    [ngClass]="{
+      'xl:w-1/2': wide,
+    }"
+  >
+    <app-map></app-map>
+  </div>
+</div>
