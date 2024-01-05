@@ -45,11 +45,47 @@
       vi trygge på at de vil finne seg til rette hos oss!
     </p>
 
-    <!-- Kort informasjon om AFT-tiltaket -->
-
-    <!-- Utviklerkurset tar for seg: -->
-
-    <!-- Dette kan deltakerne også gjøre hos oss: -->
+    <div class="join join-vertical w-full mt-4 p-0 rounded overflow-hidden">
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" checked="checked" />
+        <div class="collapse-title text-xl font-medium bg-error text-error-content glass">
+          Kort informasjon om AFT-tiltaket
+        </div>
+        <div class="collapse-content bg-base-100">
+          <div class="pt-4">
+            <p *ngFor="let info of aftInfo" class="py-2">
+              - {{ info }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium bg-error text-error-content glass">
+          Utviklerkurset tar for seg
+        </div>
+        <div class="collapse-content bg-base-100">
+          <ul class="list-disc list-inside py-2 pt-6">
+            <li *ngFor="let content of courseContent">
+              {{ content }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300">
+        <input type="radio" name="my-accordion-4" />
+        <div class="collapse-title text-xl font-medium bg-error text-error-content glass">
+          Dette kan deltakerne også gjøre hos oss
+        </div>
+        <div class="collapse-content bg-base-100">
+          <ul class="list-disc list-inside py-2 pt-6">
+            <li *ngFor="let content of additionalContent">
+              {{ content }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <h2 class="
       mt-10
@@ -81,31 +117,6 @@
       Emnene som er på kurset er språk og teknologier som; HTML, CSS, JavaScript, React, Python og UI/UX-design.
     </p>
 
-    <!-- <div class="rounded overflow-hidden mt-2"> -->
-    <!--   <table class="table"> -->
-    <!--     <thead class="bg-neutral text-neutral-content text-lg"> -->
-
-    <!--       <tr> -->
-    <!--         <th>Tema</th> -->
-    <!--         <th>Teknologier</th> -->
-    <!--       </tr> -->
-
-    <!--     </thead> -->
-    <!--     <tbody> -->
-
-    <!--       <tr *ngFor="let item of thematicContent" class="odd:bg-accent odd:text-accent-content"> -->
-    <!--         <td class="font-bold text-xs"> -->
-    <!--           {{ item.theme }} -->
-    <!--         </td> -->
-    <!--         <td class="text-base"> -->
-    <!--           {{ item.tech }} -->
-    <!--         </td> -->
-    <!--       </tr> -->
-
-    <!--     </tbody> -->
-    <!--   </table> -->
-    <!-- </div> -->
-
     <h2 class="
       mt-10
       text-3xl
@@ -113,7 +124,11 @@
       I løpet av kurset skal deltakerne igjennom følgende:
     </h2>
 
-    <!-- Liste -->
+    <ul class="list-disc list-inside py-2 pt-6">
+      <li *ngFor="let content of requiredContent">
+        {{ content }}
+      </li>
+    </ul>
 
     <p class="py-2">
       Kurset tar deltakerne fra et nybegynner nivå og går opp til viderekommen. Noen deltakere med ekstra stor interesse
@@ -133,27 +148,6 @@
     ">
       Hvordan er hverdagen på utviklerkurset?
     </h2>
-
-    <!-- <ul class="steps steps-vertical"> -->
-    <!--   <!-- data-content="●" --> -->
-    <!--   <li *ngFor="let skill of basicSkills" class="step step-accent"> -->
-    <!--     <p class="text-left"> -->
-    <!--       {{ skill }} -->
-    <!--     </p> -->
-    <!--   </li> -->
-    <!-- </ul> -->
-
-    <!-- <p class="py-2"> -->
-    <!--   Basert på spesialisering: -->
-    <!-- </p> -->
-
-    <!-- <ul class="steps steps-vertical"> -->
-    <!--   <li *ngFor="let skill of specificSkills" data-content="●" class="step step-neutral"> -->
-    <!--     <p class="text-left"> -->
-    <!--       {{ skill }} -->
-    <!--     </p> -->
-    <!--   </li> -->
-    <!-- </ul> -->
 
     <p class="py-2">
       Hver uke er det 3 obligatoriske dager med kurs i vårt IT-klasserom. Utenom disse dagene kan deltakerne også
