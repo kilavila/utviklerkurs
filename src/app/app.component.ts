@@ -9,6 +9,7 @@
 // Form elements do not have associated labels
 // Links do not have a discernible name
 // Image elements have [alt] attributes that are redundant text.
+// Add more content to /deltaker page
 
 
 
@@ -45,7 +46,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private viewPortScroller: ViewportScroller,
     public rs: RouterService,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     // INFO: Listen for router events and scroll to top
