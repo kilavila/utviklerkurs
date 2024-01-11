@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { Error404PageComponent } from './error404-page/error404-page.component';
 import { PortalComponent } from './portal/portal.component';
 import { AuthGuard } from './portal/auth.guard';
+import { ProfileComponent } from './portal/profile/profile.component';
 
 export const routes: Routes = [
   // INFO: Landing page
@@ -35,12 +36,20 @@ export const routes: Routes = [
   },
 
   // INFO: Portal pages
-  // TODO: Test childroutes with auth guard
   {
     path: 'portal',
-    component: PortalComponent,
     canActivate: [AuthGuard],
-    children: [],
+    children: [
+      {
+        path: '',
+        component: PortalComponent,
+        pathMatch: 'full',
+      },
+      {
+        path: 'profil',
+        component: ProfileComponent,
+      },
+    ],
   },
 
   // INFO: Error pages & wildcard

@@ -22,7 +22,11 @@
       border-b-2
       border-b-gray-300
     ">
-      <form class="card-body">
+      <form
+        class="card-body"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+      >
 
         <div class="form-control">
           <label class="label">
@@ -33,6 +37,7 @@
           <input
             required
             type="email"
+            formControlName="email"
             placeholder="email"
             class="
               placeholder-gray-600
@@ -54,6 +59,7 @@
           <input
             required
             type="password"
+            formControlName="password"
             placeholder="password"
             class="
               placeholder-gray-600
@@ -79,17 +85,38 @@
         </div>
 
         <div class="form-control mt-4">
-          <button class="
-            btn
-            btn-neutral
-            shadow
-          ">
+          <button
+            type="submit"
+            [disabled]="!loginForm.valid"
+            class="
+              btn
+              btn-neutral
+              shadow
+            "
+          >
             Logg inn
           </button>
         </div>
 
       </form>
     </div>
+    <span
+      class="
+        w-full
+        py-1
+        px-3
+        rounded-sm
+        shadow
+        text-base
+        glass
+      "
+      [ngClass]="{
+        'bg-success text-success-content': serverOnline,
+        'bg-error text-error-content': !serverOnline
+      }"
+    >
+      <b>Status:</b> {{ serverOnline ? 'Server online' : 'Server offline' }}
+    </span>
 
   </div>
 </div>
