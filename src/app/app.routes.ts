@@ -8,6 +8,8 @@ import { Error404PageComponent } from './error404-page/error404-page.component';
 import { PortalComponent } from './portal/portal.component';
 import { AuthGuard } from './portal/auth.guard';
 import { ProfileComponent } from './portal/profile/profile.component';
+import { DashboardComponent } from './portal/dashboard/dashboard.component';
+import { FilesComponent } from './portal/files/files.component';
 
 export const routes: Routes = [
   // INFO: Landing page
@@ -38,16 +40,25 @@ export const routes: Routes = [
   // INFO: Portal pages
   {
     path: 'portal',
+    component: PortalComponent,
     canActivate: [AuthGuard],
     children: [
       {
         path: '',
-        component: PortalComponent,
+        redirectTo: '/portal/oversikt',
         pathMatch: 'full',
+      },
+      {
+        path: 'oversikt',
+        component: DashboardComponent,
       },
       {
         path: 'profil',
         component: ProfileComponent,
+      },
+      {
+        path: 'kursfiler',
+        component: FilesComponent,
       },
     ],
   },

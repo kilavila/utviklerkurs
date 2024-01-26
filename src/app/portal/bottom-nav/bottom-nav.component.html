@@ -1,0 +1,35 @@
+<div
+  *ngIf="bottomNav"
+  class="
+    btm-nav
+    lg:w-[calc(100%-24px)]
+    lg:left-3
+    lg:bottom-3
+    lg:right-3
+    lg:rounded
+    text-neutral-content
+    bg-neutral
+    overflow-hidden
+    gap-1
+  "
+>
+  <a
+    *ngFor="let menuItem of menuItems"
+    class="
+    flex
+    flex-row
+    justify-center
+    items-center
+    "
+    [routerLink]="menuItem.path"
+    [routerLinkActive]="['bg-info', 'glass']"
+    [routerLinkActiveOptions]="{ exact : true }"
+  >
+    <span class="material-symbols-outlined">
+      {{ menuItem.icon }}
+    </span>
+    <span class="btm-nav-label font-bold hidden lg:inline">
+      {{ menuItem.name }}
+    </span>
+  </a>
+</div>

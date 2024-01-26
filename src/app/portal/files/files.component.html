@@ -1,0 +1,116 @@
+<div class="hero min-h-64 bg-neutral text-neutral-content">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold">
+        <span class="material-symbols-outlined text-4xl">
+          folder_open
+        </span>
+        Kursfiler
+      </h1>
+      <p class="py-6">
+        Her ligger alle dokumentene for utviklerkurset,
+        vi laster opp nye filer etterhvert som vi går gjennom kurset.
+      </p>
+      <button class="btn" onclick="my_modal_5.showModal()">
+        Last opp
+        <span class="material-symbols-outlined">
+          upload
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<dialog id="my_modal_5" class="modal modal-bottom lg:modal-middle">
+  <div class="modal-box">
+
+    <h3 class="font-bold text-xl">
+      Last opp fil
+    </h3>
+    <p class="mb-4 text-sm">
+      Velg filer som skal lastes opp.
+    </p>
+
+    <label class="btn btn-neutral" for="fileUploadInput">
+      Velg filer
+    </label>
+    <input
+      id="fileUploadInput"
+      type="file"
+      class="hidden file-input file-input-bordered w-full max-w-lg rounded"
+      (change)="onFileChange($event)"
+      multiple
+    />
+
+    <div class="overflow-x-auto" *ngIf="files.length > 0">
+      <table class="table table-zebra table-responsive">
+        <thead>
+          <tr>
+            <th class="pl-0 pr-2"></th>
+            <th class="pl-0 pr-2">Navn</th>
+            <th class="px-2">Type</th>
+            <th class="px-2 text-right">Størrelse</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr
+            *ngFor="let file of files"
+            [class.text-red-600]="file.size > 49999999"
+          >
+            <td class="pr-0 pl-2">
+              <button
+                class="
+                  btn
+                  btn-sm
+                  btn-square
+                  btn-ghost
+                  bg-red-200
+                  text-neutral
+                  hover:bg-red-500
+                  hover:text-neutral-content
+                "
+                (click)="removeFile(file)"
+              >
+                <span class="material-symbols-outlined">
+                  remove
+                </span>
+              </button>
+            </td>
+            <td class="pl-0 pr-2">
+              {{ file.name }}
+            </td>
+            <td class="px-2 uppercase">{{ file.type.split('/')[1] }}</td>
+            <td
+              class="px-2 font-bold text-right"
+              [ngClass]="{
+                'text-yellow-600': file.size > 9999999 && file.size <= 49999999,
+                'text-green-600': file.size <= 9999999
+              }"
+            >
+              {{
+                file.size > 999999
+                  ? ((file.size / 1024) / 1024).toFixed(2) + ' MB'
+                  : (file.size / 1024).toFixed(0) + ' KB'
+              }}
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-action">
+      <button class="btn btn-success text-success-content rounded">
+        Last opp
+      </button>
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-outline btn-error text-error-content rounded">
+          Avbryt
+        </button>
+      </form>
+    </div>
+
+  </div>
+</dialog>

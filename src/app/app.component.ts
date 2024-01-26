@@ -6,6 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { RouterService } from './services/router.service';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
+import { BottomNavComponent } from './portal/bottom-nav/bottom-nav.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import { ScrollTopComponent } from './scroll-top/scroll-top.component';
     FooterComponent,
     SearchComponent,
     ScrollTopComponent,
+    BottomNavComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
