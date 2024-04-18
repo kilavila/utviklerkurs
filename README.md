@@ -1,7 +1,7 @@
 <div style="text-align: center; background-color: #0D1117; padding-top: 20px;">
   <img src="./src/assets/img/logo-white.svg" width="400" />
   <h1 style="color: #FFFFFF">
-    ALF Developer course
+    ALF Developer Course
   </h1>
 </div>
 
@@ -20,30 +20,142 @@ introduction to the principles for developing structured, creative and well-func
 
 Built using Angular 17, utilizing standalone components.
 
+### Requirements
+
+> <b>Having trouble running or building the project?</b><br>
+> This might be happening if you run different versions of NodeJS or Angular.<br>
+> Try installing the `versions listed at the top` of this document!
+
+<details>
+  <summary style="font-weight: bold">Git</summary>
+  Using Git is a must for working on this project, and you should never work on the main branch!<br>
+  In this documentation we will use Git in the terminal, use Github Desktop or LazyGit if you prefer.<br>
+  Go to https://git-scm.com and follow the installation steps.<br>
+  If you don't get access to Git from your default terminal, you can use the Git Bash terminal.
+</details>
+
+<details>
+  <summary style="font-weight: bold">NodeJS / NPM</summary>
+  In order to install the projects dependencies, you will need to install NodeJS.<br>
+  Go to https://nodejs.org and download the latest version.<br>
+  NPM should be installed along with NodeJS.
+</details>
+
+<details>
+  <summary style="font-weight: bold">Angular CLI</summary>
+  Angular CLI is mainly used for generating components and building the project.<br>
+  Go to https://angular.io and follow the installation steps.
+</details>
+
+<br>
+
+You can check if the installation went ok by running the following commands in your terminal:
+
+```bash
+node --version
+```
+```bash
+npm --version
+```
+```bash
+ng version
+```
+
 ### Getting started
 
-Clone the repository.
+##### Cloning the repository
+
+Open your terminal and `cd` into a folder where you want to clone the repository.<br>
+Use `pwd` and `ls` to orientate yourself, and run the following command.
 
 ```bash
 git clone https://github.com/kilavila/utviklerkurs.git
 ```
 
-Proceed with the installation of the project.
+Now move into the project folder by running:
 
 ```bash
 cd ./utviklerkurs
+```
+
+##### Creating a new branch
+
+Create a new branch in the repository, again; don't work on main!<br>
+You can use your firstname as a branch name if you're not sure what to call it.<br>
+Run the following command:
+
+```bash
+git checkout -b your-branch-name
+```
+
+Make sure you are in the correct branch:
+
+```bash
+git branch
+```
+
+##### Running the project
+
+To install all the dependencies in the project, run the following command:
+
+```bash
 npm install
 ```
 
-To initiate the project and display it in the browser, run the command and access the URL: `http://localhost:4200`.
+When the installation is complete, the project should be ready to run locally.<br>
+All the scripts and dependencies can be found in `package.json`.<br>
+Now run the following command to run the project locally:
 
 ```bash
 npm start
 ```
 
-### Deployment
+> Open your browser and navigate to http://localhost:4200<br>
+> Press CTRL+C in the terminal to stop the server.
 
-To initiate the deployment of this project, execute the following command.
+##### Commit and push your changes
+
+> Always, always, always write a proper commit message!<br>
+> It should be short and descriptive...
+
+To commit your changes, run the following commands:
+
+```bash
+git add .
+git commit -m "Your commit message"
+```
+
+If this is the first time you're pushing a commit, you will need to create an account on Github.<br>
+Go to https://github.com and create an account.<br>
+
+Then, run the following command to push your changes:
+
+```bash
+git push -u origin your-branch-name
+```
+
+> You only have to use `git push -u origin your-branch-name` when you're pushing the first time.<br>
+> Otherwise, you can use `git push`.
+
+##### Merge branches
+
+> Make a pull request if you don't have access to main or don't know how to merge!<br>
+
+A merge tutorial will be available soon. Practise merging in smaller projects first.
+
+<u>Making a pull request:</u>
+
+1. Navigate to your branch on Github(https://github.com/kilavila/utviklerkurs/tree/your-branch-name).
+2. Click on `Contribute`.
+3. Click on `Open Pull Request`.
+4. Fill in the form and click on `Create pull request`.
+
+##### Building the project
+
+> Skip this step if you made a pull request and didn't merge with main.<br>
+> Someone will merge your changes, build and deploy it for you.
+
+When you have made all the changes, run the following command to build the project:
 
 ```bash
 npm run build
