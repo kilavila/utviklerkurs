@@ -18,7 +18,7 @@ export class SliderComponent implements AfterViewInit {
   slides: Slide[] = [
     {
       icon: 'person',
-      title: 'Interessert i utvikling?',
+      title: 'For Deltakere',
       description: `Både næringslivet og offentlige tjenester har i dag et uvanlig stort behov for IT-kompetanse innen de fleste sektorer. Ifølge Nav's bedriftsundersøkelse (2020) var det 3.250 ubesatte IT-stillinger i Norge, og innen 2030 er det estimert et behov for opp mot 40.000 nye arbeidstakere med IT-kompetanse, for å støtte Norges teknologiske utvikling.`,
       image: 'ux-store-jJT2r2n7lYA-unsplash',
       button: {
@@ -29,7 +29,7 @@ export class SliderComponent implements AfterViewInit {
     },
     {
       icon: 'domain',
-      title: 'Ansette medarbeider?',
+      title: 'For Bedrifter',
       description: 'Utviklerkurset fokuserer på å lære deltakerne det mest etterspurte, framtidsrettede og moderne innen programutvikling i dag. Kurset dekker både grunnleggende ferdigheter, men tilpasses også etter det næringslivet etterspør av aktuelle tema og teknologier.',
       image: 'rodeo-project-management-software--f0SlS5MYnI-unsplash',
       button: {
@@ -40,8 +40,8 @@ export class SliderComponent implements AfterViewInit {
     },
     {
       icon: 'diversity_3',
-      title: 'Vi samarbeider!',
-      description: 'Det er vitkig for oss at deltakerne får den informasjonen de trenger for å ta en avgjørelse på om de ønsker å begynne på utviklerkurset eller på avdelingen. Vi inviterer dere derfor gjerne til et uforpliktene møte sammen med deltaker for å fortelle om tiltaket vårt og gi dere en omvisning i våre lokaler.',
+      title: 'For Nav',
+      description: 'Det er viktig for oss at deltakerne får den informasjonen de trenger for å ta en avgjørelse på om de ønsker å begynne på utviklerkurset eller på avdelingen. Vi inviterer dere derfor gjerne til et uforpliktene møte sammen med deltaker for å fortelle om tiltaket vårt og gi dere en omvisning i våre lokaler.',
       image: 'louise-viallesoubranne-5EhN4wbfvBc-unsplash',
       button: {
         text: 'Les mer',

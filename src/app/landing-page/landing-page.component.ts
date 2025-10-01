@@ -27,15 +27,15 @@ export class LandingPageComponent implements AfterViewInit {
 
   courses = [
     {
-      date: 'August 2024',
-      status: 'Fulltegnet',
-      full: true,
-    },
-    {
-      date: 'Mars 2025',
+      date: 'Januar 2026',
       status: 'Ledige plasser',
       full: false,
     },
+    // {
+    //   date: 'August 2025',
+    //   status: 'Fulltegnet',
+    //   full: false,
+    // },
   ];
 
   constructor(
