@@ -19,21 +19,24 @@ export class NavPageComponent {
   aftInfo: string[] = [
     'AFT-tiltaket kan ha en varighet på inntil 1 år',
     'Utviklerkurset varer i 4 måneder',
-    'Arbeidstid på kurset er 3 dager uken á 5timer - kl. 09:00-14:00',
+    'Arbeidstid på kurset er 3 dager uken á 5 timer - kl. 09:00-14:00',
     'Arbeidsdagen består typisk av 1-2 timer undervisning og gjennomgang av oppgaver. Deretter jobber deltakerne resten av dagen med praktiske programmeringsoppgaver under veiledning av kursleder.',
-    'I etterkant av fullført Utviklerkurs er planen et praksisopphold i ekstern bedrift. Der lærer deltakerne mer om samarbeid, og utvikler sin faglige kompetanse under oppfølging av praksisansvarlig på praksisplassen. En praksiperiode har en minimum varighet på en måned, men innen IT-utvikling er 3-6mnd mer vanlig',
-    'Det tilbys også en del andre kurs når man er i AFT-tiltaket. Fra andre IT-relaterte kurs som Digital Markedsføring, til kurs som dekker sosialfaglige emner som ADHD, Tankevirus. I tillegg blir karrierverktøyet InFlow24 benyttet, og det fokuseres på skriving av søknader samt CV.',
+    'I etterkant av fullført Utviklerkurs er planen et praksisopphold i ekstern bedrift. Der lærer deltakerne mer om samarbeid, og utvikler sin faglige kompetanse under oppfølging av praksisansvarlig på praksisplassen. En praksiperiode har en minimum varighet på en måned, men innen IT-utvikling er 3-6 mnd mer vanlig',
+    'Det tilbys også en del andre kurs når man er i AFT-tiltaket. Fra andre IT-relaterte kurs som Digital Markedsføring, til kurs som dekker sosialfaglige emner som ADHD, Tankevirus og JobbFokus. I tillegg blir karrierverktøyet InFlow24 benyttet, og det øves på skriving av søknader samt CV.',
   ];
 
   courseContent: string[] = [
     'Oppbygging av nettsider',
-    'Oppsett av databaser',
+    'Tilkobling til eksterne datakilder (databaser) via API',
     'Prosjektarbeid',
     'UI/UX-design av webløsninger',
     'Dynamiske nettsider med skript',
     'Programmering',
     'Bruke ulike utvikler-verktøy',
     'Lære arbeidsmetoder for utvikling',
+    'Gjennomgang av sikkerhetsprinsipper innen IT', 
+    'Bruk av KI i arbeidet som IT-utvikler',
+    'Opplæring i bruk av versjonskontrollsystemet Git & GitHub'
   ];
 
   additionalContent: string[] = [
