@@ -27,7 +27,7 @@ export class LandingPageComponent implements AfterViewInit {
 
   courses = [
     {
-      date: 'Januar 2026',
+      date: 'August 2026',
       status: 'Ledige plasser',
       full: false,
     },
